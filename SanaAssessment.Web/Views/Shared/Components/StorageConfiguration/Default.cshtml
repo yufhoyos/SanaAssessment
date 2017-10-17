@@ -1,0 +1,15 @@
+﻿@model List<SelectListItem>
+<form asp-action="ChangeStorage" asp-controller="Home" data-ajax="true">
+    <div class="row" style="margin-top:5px;margin-bottom:5px;">
+        <div class="form-group">
+            <label class="col-md-2">Storage:</label>
+            <select class="col-md-2 form-control" style="width:200px;" name="storageSelected" asp-items="@Model"></select>
+            <div class="col-md-4">
+                <input type="submit" class="btn btn-primary" value="Update Storage" />
+            </div>
+        </div>
+        <div>
+            <label>Actual Storage: @ViewData["ActualStorage"]</label>
+        </div>
+    </div>
+</form>
